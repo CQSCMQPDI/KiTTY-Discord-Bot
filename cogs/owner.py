@@ -835,7 +835,7 @@ class Owner:
     @commands.command()
     async def info(self):
         """Shows info about Red"""
-        author_repo = "https://github.com/"
+        author_repo = "https://git.drycat.fr/Geekcat/KiTTY-Discord-Bot/"
         red_repo = author_repo + ""
         server_url = "https://discord.io/techcordfr"
         dpy_repo = "https://github.com/"
