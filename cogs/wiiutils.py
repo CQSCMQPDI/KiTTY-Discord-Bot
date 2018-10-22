@@ -40,6 +40,9 @@ class wiiutils:
     @wii.command(pass_context=True)
     async def homebrew(self, ctx):
         """You want to homebrew your Wii ?"""
+        homebrewfr = "https://katolo.gy/2018/10/03/softmod-sa-wii/"
+        homebrewen = "https://sites.google.com/site/completesg/"
+        await self.bot.say(homebrewfr + "\n" + homebrewen)
 
 def setup(bot):
     bot.add_cog(wiiutils(bot))
