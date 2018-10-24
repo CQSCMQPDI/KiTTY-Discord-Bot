@@ -30,5 +30,11 @@ class cat:
         embed.set_thumbnail(url="https://i.imgur.com/XSjUOdY.jpg")
     	await self.bot.say(embed=embed)
 
+    @commands.command()
+    async def emote(self):
+        """Because I need more cat emotes"""
+        emote = nekos.textcat()
+        await self.bot.say(emote)
+
 def setup(bot):
     bot.add_cog(cat(bot))
