@@ -27,6 +27,7 @@ class cat:
     	facts = nekos.fact()
     	embed=discord.Embed(color=0x717171)
     	embed.add_field(name="KiTTY/Deo", value=facts, inline=False)
+        embed.set_thumbnail(url="https://i.imgur.com/XSjUOdY.jpg")
     	await self.bot.say(embed=embed)
 
 def setup(bot):
