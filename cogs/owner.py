@@ -840,7 +840,7 @@ class Owner:
         server_url = "https://discord.io/techcordfr"
         dpy_repo = "https://github.com/"
         python_url = "https://www.python.org/"
-        since = datetime.datetime(2016, 1, 2, 0, 0)
+        since = datetime.datetime(2017, 1, 2, 0, 0)
         days_since = (datetime.datetime.utcnow() - since).days
         dpy_version = "[{}]({})".format(discord.__version__, dpy_repo)
         py_version = "[{}.{}.{}]({})".format(*os.sys.version_info[:3],
@@ -859,16 +859,15 @@ class Owner:
             owner = "Unknown"
 
         about = (
-            "This is [KiTTY, an open source cat Discord bot]({}) "
-            "created by [Twentysix bot]({}) and improved by Geekcat.\n\n"
-            "".format(server_url))
+            "This is [KiTTY, an open source cat Discord bot]({})."
+            "".format(author_repo))
 
         embed = discord.Embed(colour=discord.Colour.red())
         embed.add_field(name="Instance owned by", value=str(owner))
         embed.add_field(name="Python", value=py_version)
         embed.add_field(name="discord.py", value=dpy_version)
         embed.add_field(name="About KiTTY", value=about, inline=False)
-        embed.set_footer(text="Bringing joy since 2018 (over "
+        embed.set_footer(text="Bringing joy since 2017 (over "
                          "{} days ago!)".format(days_since))
 
         try:
