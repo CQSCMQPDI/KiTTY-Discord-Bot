@@ -17,7 +17,7 @@ class wiiutils:
     	if ctx.invoked_subcommand is None:
     		await send_cmd_help(ctx)
 
-    @wii.command(pass_context=True)
+    @commands.command(pass_context=True)
     async def wiimmfi(self, ctx):
     	"""Does Wiimmfi servers are down ?"""
     	query = ("https://wiimmfi.glitch.me/mkw/amount")
