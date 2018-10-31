@@ -27,7 +27,7 @@ class text:
         loader = await self.bot.say("Testing the most efficient server for connection testing !")
         s = speedtest.Speedtest()
         s.get_best_server()
-        await self.bot.edit_message(loader, "I measure the download speed ! :cat")
+        await self.bot.edit_message(loader, "I measure the download speed ! :cat:")
         s.download()
         await self.bot.edit_message(loader, "I measure the upload speed ! :cat:")
         s.upload()
