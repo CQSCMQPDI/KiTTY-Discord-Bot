@@ -233,7 +233,7 @@ class Nsfw:
             except Exception as e:
                 await self.bot.say(":x: `{}`".format(e))
 
-    @nsfw.command(pass_context=True, no_pm=True)
+    @commands.command(pass_context=True, no_pm=True)
     async def neko(self, ctx):
         """A random neko image from nekos.py"""
         channel_nsfw = await self.is_nsfw(ctx.message.channel)
@@ -242,6 +242,18 @@ class Nsfw:
             return
         try:
             await self.bot.say(nekos.img('neko'))
+        except Exception as e:
+            await self.bot.say(":x: `{}`".format(e))
+
+    @commands.command(pass_context=True, no_pm=True)
+    async def yuri(self, ctx):
+        """A random neko image from nekos.py"""
+        channel_nsfw = await self.is_nsfw(ctx.message.channel)
+        if not channel_nsfw:
+            await self.bot.say(nsfw_warning)
+            return
+        try:
+            await self.bot.say(nekos.img('yuri'))
         except Exception as e:
             await self.bot.say(":x: `{}`".format(e))
 
