@@ -70,7 +70,7 @@ class text:
 
     @commands.command()
     async def katology(self):
-        katology = "Tu connais katology ? Un blog francais traitant de l'actualité technologique, avec un aspect communautaire !"
+        katology = "Tu connais katology ? Un blog francais traitant de l'actualité technologique, avec un aspect communautaire !\n http://katolo.gy !"
         await self.bot.say(katology)
 
 
