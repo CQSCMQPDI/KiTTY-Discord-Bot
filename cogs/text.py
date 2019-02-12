@@ -73,6 +73,15 @@ class text:
         katology = "Tu connais katology ? Un blog francais traitant de l'actualité technologique, avec un aspect communautaire !\n http://katolo.gy !"
         await self.bot.say(katology)
 
+    @client.command()
+    async def bitcoin():
+        url = 'https://api.coindesk.com/v1/bpi/currentprice/BTC.json'
+        async with aiohttp.ClientSession() as session:  # Async HTTP request
+        raw_response = await session.get(url)
+        response = await raw_response.text()
+        response = json.loads(response)
+        await client.say("Bitcoin price is: " + response['bpi']['EUR']['rate'] + " €")
+
 
 def setup(bot):
     bot.add_cog(text(bot))
